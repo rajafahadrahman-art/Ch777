@@ -4,19 +4,21 @@ type FaqProps = {
   title?: string;
   intro?: string;
   items: FaqItem[];
+  headingId?: string;
 };
 
 export default function Faq({
   title = "Frequently Asked Questions",
   intro,
   items,
+  headingId,
 }: FaqProps) {
   return (
     <section className="section section-alt">
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">FAQ</p>
-          <h2>{title}</h2>
+          <h2 id={headingId}>{title}</h2>
           {intro ? <p>{intro}</p> : null}
         </div>
         <div className="faq-list">
