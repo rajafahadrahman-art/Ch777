@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
@@ -80,6 +81,10 @@ export default function DepositGuidePage() {
         <div className="container prose">
           <h2>Understanding the CH777 Deposit Process</h2>
           <p>
+            For a general overview of the platform, visit our{" "}
+            <Link href="/">Ch777</Link> homepage guide.
+          </p>
+          <p>
             A <strong>Ch777 deposit</strong> starts inside your logged-in
             account. Open the wallet or cashier area, choose an available method,
             enter the amount, and confirm the payment details carefully before
@@ -147,6 +152,11 @@ export default function DepositGuidePage() {
               balance.
             </li>
           </ol>
+          <p className="prose" style={{ marginTop: "1.25rem" }}>
+            You can return to the complete{" "}
+            <Link href="/">Ch777 Game</Link> overview for features, games,
+            safety information, and general guidance.
+          </p>
         </div>
       </section>
 

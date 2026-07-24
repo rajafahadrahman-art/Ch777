@@ -56,6 +56,10 @@ export default function AboutUsPage() {
         <div className="container prose">
           <h2>Purpose of This Website</h2>
           <p>
+            For a general overview of the platform, visit our{" "}
+            <Link href="/">Ch777</Link> homepage guide.
+          </p>
+          <p>
             <strong>CH777Game.com.pk</strong> exists to organize useful
             information in one place. Instead of scattering tips across random
             posts, we keep the essentials structured across clear pages for
@@ -67,6 +71,11 @@ export default function AboutUsPage() {
             practical checks, and point readers to the next relevant guide. The
             site is not a substitute for official in-app instructions or local
             regulations.
+          </p>
+          <p>
+            You can return to the complete{" "}
+            <Link href="/">Ch777 Game</Link> overview for features, games,
+            safety information, and general guidance.
           </p>
           <h2>User Support and Content Goals</h2>
           <ul>

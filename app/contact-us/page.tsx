@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import JsonLd from "@/components/JsonLd";
@@ -58,6 +59,10 @@ export default function ContactUsPage() {
           <aside className="card">
             <h2>Contact Details</h2>
             <p>
+              For a general overview of the platform, visit our{" "}
+              <Link href="/">Ch777</Link> homepage guide.
+            </p>
+            <p>
               For <strong>CH777Game.com.pk contact</strong> requests, use the
               form or email us directly.
             </p>
@@ -72,6 +77,11 @@ export default function ContactUsPage() {
               <li>Audience focus: Pakistan</li>
               <li>Response topic: informational website support</li>
             </ul>
+            <p>
+              You can return to the complete{" "}
+              <Link href="/">Ch777 Game</Link> overview for features, games,
+              safety information, and general guidance.
+            </p>
             <p>
               Please include page URLs when reporting content issues so we can
               locate the section quickly.

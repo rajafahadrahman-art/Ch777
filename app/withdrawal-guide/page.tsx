@@ -81,6 +81,10 @@ export default function WithdrawalGuidePage() {
         <div className="container prose">
           <h2>Understanding the CH777 Withdrawal Flow</h2>
           <p>
+            For a general overview of the platform, visit our{" "}
+            <Link href="/">Ch777</Link> homepage guide.
+          </p>
+          <p>
             A <strong>Ch777 withdrawal</strong> request usually starts in the
             wallet area after you are signed in. You choose a payout method,
             enter the amount, confirm destination details, and submit the
@@ -117,6 +121,11 @@ export default function WithdrawalGuidePage() {
               Submit the request and save the reference or status message.
             </li>
           </ol>
+          <p className="prose" style={{ marginTop: "1.25rem" }}>
+            You can return to the complete{" "}
+            <Link href="/">Ch777 Game</Link> overview for features, games,
+            safety information, and general guidance.
+          </p>
         </div>
       </section>
 

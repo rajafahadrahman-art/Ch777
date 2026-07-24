@@ -5,6 +5,7 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/images/ch777-logo.webp`,
@@ -17,12 +18,12 @@ export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
     inLanguage: "en",
     publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
+      "@id": `${SITE_URL}/#organization`,
     },
   };
 }
@@ -38,18 +39,26 @@ export function webPageSchema({
   path: string;
   type?: string;
 }) {
+  const url = `${SITE_URL}${path === "/" ? "/" : path}`;
   return {
     "@context": "https://schema.org",
     "@type": type,
+    "@id": `${url}#webpage`,
     name,
     description,
-    url: `${SITE_URL}${path === "/" ? "" : path}`,
+    url,
     isPartOf: {
-      "@type": "WebSite",
-      name: SITE_NAME,
-      url: SITE_URL,
+      "@id": `${SITE_URL}/#website`,
     },
     inLanguage: "en",
+    ...(path === "/"
+      ? {
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: `${SITE_URL}/images/ch777-home-banner.webp`,
+          },
+        }
+      : {}),
   };
 }
 
@@ -61,7 +70,7 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${SITE_URL}${item.href === "/" ? "" : item.href}`,
+      item: `${SITE_URL}${item.href === "/" ? "/" : item.href}`,
     })),
   };
 }

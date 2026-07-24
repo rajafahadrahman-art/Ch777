@@ -98,6 +98,10 @@ export default function LoginPage() {
           <div className="prose">
             <h2>What Is CH777 Login?</h2>
             <p>
+              For a general overview of the platform, visit our{" "}
+              <Link href="/">Ch777</Link> homepage guide.
+            </p>
+            <p>
               <strong>Ch777 login</strong> is the process of entering your
               registered details to open your account profile. A reliable sign-in
               flow matters because it protects your wallet actions and personal
@@ -143,6 +147,11 @@ export default function LoginPage() {
               If prompted, complete any extra verification step shown in-app.
             </li>
           </ol>
+          <p style={{ marginTop: "1.25rem", color: "var(--text-muted)" }}>
+            You can return to the complete{" "}
+            <Link href="/">Ch777 Game</Link> overview for features, games,
+            safety information, and general guidance.
+          </p>
         </div>
       </section>
 

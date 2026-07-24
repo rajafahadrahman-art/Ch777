@@ -35,6 +35,13 @@ export const IMAGES = {
     width: 1916,
     height: 821,
   },
+  homeMobileBanner: {
+    src: "/images/ch777-home-mobile-banner.webp",
+    alt: "Ch777",
+    title: "Ch777",
+    width: 1916,
+    height: 821,
+  },
   homeFeature: {
     src: "/images/ch777-home-feature.webp",
     alt: "Ch777",

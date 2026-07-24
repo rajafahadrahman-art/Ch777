@@ -104,6 +104,10 @@ export default function DownloadPage() {
           <div className="prose">
             <h2>What Is CH777 Download?</h2>
             <p>
+              For a general overview of the platform, visit our{" "}
+              <Link href="/">Ch777</Link> homepage guide.
+            </p>
+            <p>
               <strong>Ch777 Download</strong> refers to getting the Android
               package and preparing your phone for installation. This page
               explains the process in practical language so you know what to
@@ -133,6 +137,11 @@ export default function DownloadPage() {
               transfer. After install, you can continue with{" "}
               <Link href="/ch777-login">Ch777 Login</Link> guidance if you need
               help signing in.
+            </p>
+            <p>
+              You can return to the complete{" "}
+              <Link href="/">Ch777 Game</Link> overview for features, games,
+              safety information, and general guidance.
             </p>
           </div>
           <SiteImage {...IMAGES.downloadFeature} />

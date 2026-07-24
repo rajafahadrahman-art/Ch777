@@ -14,7 +14,7 @@ export function buildMetadata({
   path,
   noIndex = false,
 }: BuildMetadataInput): Metadata {
-  const url = `${SITE_URL}${path === "/" ? "" : path}`;
+  const url = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
 
   return {
     title,
