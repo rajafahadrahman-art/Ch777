@@ -912,6 +912,26 @@ li {
   border-left: 4px solid var(--green-deep);
 }
 
+a.login-now-cta {
+  display: block;
+  text-decoration: none;
+  color: var(--green-deep);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1.15rem 1.25rem;
+}
+
+a.login-now-cta:hover {
+  color: var(--green-deep);
+  border-color: var(--gold);
+}
+
+a.login-now-cta:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 2px;
+}
+
 .highlight-card {
   background: var(--surface);
   border: 1px solid var(--border);

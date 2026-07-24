@@ -114,10 +114,10 @@ export default function HomePage() {
                 </p>
                 <div className="btn-group">
                   <Link className="btn btn-download-guide" href="/ch777-download">
-                    <span aria-hidden="true">⬇</span> View Installation Guide
+                    <span aria-hidden="true">⬇</span> Download
                   </Link>
                   <Link className="btn btn-account-guide" href="/ch777-login">
-                    <span aria-hidden="true">🔑</span> Open Account Guide
+                    <span aria-hidden="true">🔑</span> Login
                   </Link>
                 </div>
               </div>
@@ -570,16 +570,20 @@ export default function HomePage() {
               used on another website. Avoid passwords based only on a name,
               phone number, or date of birth.
             </p>
-            <WarningBox title="Account-Security Tip">
-              <p>
-                The dedicated{" "}
-                <Link href="/ch777-login">ch777 game login</Link> page covers
-                registration, account access, forgotten passwords, OTP issues,
-                mobile-number formatting, and common errors. These detailed
-                instructions are kept on their own page so the homepage remains
-                focused on the broader platform.
-              </p>
-            </WarningBox>
+            <p>
+              The dedicated{" "}
+              <Link href="/ch777-login">ch777 game login</Link> page covers
+              registration, account access, forgotten passwords, OTP issues,
+              mobile-number formatting, and common errors. These detailed
+              instructions are kept on their own page so the homepage remains
+              focused on the broader platform.
+            </p>
+            <Link
+              href="/ch777-login"
+              className="content-box content-box-warning pop-card login-now-cta"
+            >
+              <strong>Login Now</strong>
+            </Link>
           </div>
         </section>
 
@@ -590,10 +594,10 @@ export default function HomePage() {
               text="Use these pages for installation, account access, deposits, and cash-out overviews without repeating full step lists here."
             >
               <Link className="btn btn-download-guide" href="/ch777-download">
-                <span aria-hidden="true">⬇</span> View Installation Guide
+                <span aria-hidden="true">⬇</span> Download Guide
               </Link>
               <Link className="btn btn-account-guide" href="/ch777-login">
-                <span aria-hidden="true">🔑</span> Open Account Guide
+                <span aria-hidden="true">🔑</span> Login Guide
               </Link>
               <Link className="btn btn-deposit" href="/deposit-guide">
                 <span aria-hidden="true">＋</span> Read Deposit Guide
@@ -967,21 +971,57 @@ export default function HomePage() {
             </div>
             <div className="card-grid-3">
               {[
-                "Confirm the website address.",
-                "Read the game rules before joining.",
-                "Set a fixed budget.",
-                "Start with a small amount.",
-                "Keep account details private.",
-                "Check the payment information twice.",
-                "Save every transaction reference.",
-                "Read promotion conditions.",
-                "Do not chase losses.",
-                "Stop using the platform when spending is no longer controlled.",
-                "Avoid borrowed money.",
-                "Do not believe guaranteed-income messages.",
+                {
+                  title: "Verify the Website",
+                  text: "Confirm the website address.",
+                },
+                {
+                  title: "Read Game Rules",
+                  text: "Read the game rules before joining.",
+                },
+                {
+                  title: "Set a Budget",
+                  text: "Set a fixed budget.",
+                },
+                {
+                  title: "Start Small",
+                  text: "Start with a small amount.",
+                },
+                {
+                  title: "Protect Your Account",
+                  text: "Keep account details private.",
+                },
+                {
+                  title: "Check Payment Details",
+                  text: "Check the payment information twice.",
+                },
+                {
+                  title: "Save Transaction Records",
+                  text: "Save every transaction reference.",
+                },
+                {
+                  title: "Review Promotion Terms",
+                  text: "Read promotion conditions.",
+                },
+                {
+                  title: "Avoid Chasing Losses",
+                  text: "Do not chase losses.",
+                },
+                {
+                  title: "Know When to Stop",
+                  text: "Stop using the platform when spending is no longer controlled.",
+                },
+                {
+                  title: "Avoid Borrowed Money",
+                  text: "Avoid borrowed money.",
+                },
+                {
+                  title: "Ignore Income Promises",
+                  text: "Do not believe guaranteed-income messages.",
+                },
               ].map((tip) => (
-                <HighlightCard key={tip} title="New User Tip" icon="✓">
-                  <p>{tip}</p>
+                <HighlightCard key={tip.title} title={tip.title} icon="✓">
+                  <p>{tip.text}</p>
                 </HighlightCard>
               ))}
             </div>
