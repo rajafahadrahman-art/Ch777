@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import Faq from "@/components/Faq";
+import AppOverviewTable from "@/components/home/AppOverviewTable";
 import {
   CTABox,
   HighlightCard,
@@ -11,6 +12,7 @@ import {
   TipBox,
   WarningBox,
 } from "@/components/home/ContentBoxes";
+import TableOfContents from "@/components/home/TableOfContents";
 import JsonLd from "@/components/JsonLd";
 import { IMAGES } from "@/lib/constants";
 import {
@@ -33,6 +35,35 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const breadcrumbs = [{ name: "Home", href: "/" }];
+
+const TOC_ITEMS = [
+  { id: "what-is-ch777-game", label: "What Is CH777 Game?" },
+  {
+    id: "why-trending-in-pakistan",
+    label: "Why This Game Is Trending in Pakistan",
+  },
+  { id: "main-features", label: "Main Features of Ch777 App" },
+  { id: "available-games", label: "Available Game Categories" },
+  { id: "how-platform-works", label: "How the Platform Works" },
+  { id: "device-access", label: "How to Access Ch 777 Game App" },
+  {
+    id: "account-access-overview",
+    label: "Account Registration and Login Overview",
+  },
+  { id: "earn-real-money", label: "How to Earn in CH777 Game" },
+  { id: "deposit-overview", label: "Deposit and Payment Overview" },
+  { id: "withdrawal-overview", label: "Cash-Out Overview" },
+  { id: "is-ch777-safe", label: "Is CH777 Game Online Safe?" },
+  { id: "bonuses-and-rewards", label: "Bonuses and Rewards" },
+  {
+    id: "common-user-feedback",
+    label: "Player Reviews and Common Feedback",
+  },
+  { id: "benefits-and-limitations", label: "Benefits and Limitations" },
+  { id: "tips-for-new-users", label: "Tips for New Users" },
+  { id: "frequently-asked-questions", label: "Frequently Asked Questions" },
+  { id: "final-thoughts", label: "Final Thoughts" },
+] as const;
 
 const faqs = [
   {
@@ -170,10 +201,17 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="section section-cream">
+          <div className="container home-section-inner">
+            <AppOverviewTable />
+            <TableOfContents items={[...TOC_ITEMS]} />
+          </div>
+        </section>
+
         <section className="section">
           <div className="container two-col">
             <div className="prose home-section-inner">
-              <h2>What Is CH777 Game?</h2>
+              <h2 id="what-is-ch777-game">What Is CH777 Game?</h2>
               <p>
                 CH 777 Game is an account-based mobile platform where registered
                 users may be able to access several gaming categories from one
@@ -212,7 +250,9 @@ export default function HomePage() {
         <section className="section section-green">
           <div className="container">
             <div className="section-head">
-              <h2>Why This Game Is Trending in Pakistan</h2>
+              <h2 id="why-trending-in-pakistan">
+                Why This Game Is Trending in Pakistan
+              </h2>
               <p>
                 The growing interest in game comes from several changes in how
                 people use mobile phones in Pakistan. Affordable Android devices,
@@ -310,7 +350,7 @@ export default function HomePage() {
         <section className="section section-cream">
           <div className="container">
             <div className="section-head">
-              <h2>Main Features of Ch777 App</h2>
+              <h2 id="main-features">Main Features of Ch777 App</h2>
               <p>
                 The available features may change, but the following areas are
                 commonly expected in the Ch777 Game app.
@@ -377,7 +417,7 @@ export default function HomePage() {
         <section className="section section-yellow">
           <div className="container">
             <div className="section-head">
-              <h2>Available Game Categories</h2>
+              <h2 id="available-games">Available Game Categories</h2>
               <p>
                 The exact library can change, but these are some categories users
                 may come across.
@@ -477,7 +517,7 @@ export default function HomePage() {
 
         <section className="section">
           <div className="container home-section-inner prose">
-            <h2>How the Platform Works</h2>
+            <h2 id="how-platform-works">How the Platform Works</h2>
             <p>
               A user normally creates an account, opens the game lobby, selects a
               title, and uses the available wallet balance to join. Promotions
@@ -511,7 +551,7 @@ export default function HomePage() {
 
         <section className="section section-ivory">
           <div className="container home-section-inner prose">
-            <h2>How to Access Ch 777 Game App</h2>
+            <h2 id="device-access">How to Access Ch 777 Game App</h2>
             <h3>Download Ch777 Game on Android Devices</h3>
             <p>
               Android is likely to be the main option because the platform is
@@ -554,7 +594,9 @@ export default function HomePage() {
 
         <section className="section section-green">
           <div className="container home-section-inner prose">
-            <h2>Account Registration and Login Overview</h2>
+            <h2 id="account-access-overview">
+              Account Registration and Login Overview
+            </h2>
             <p>
               New users may be asked to provide a mobile number, password,
               verification code, or referral information. Existing users normally
@@ -611,7 +653,7 @@ export default function HomePage() {
 
         <section className="section section-cream">
           <div className="container home-section-inner prose">
-            <h2>How to Earn in CH777 Game</h2>
+            <h2 id="earn-real-money">How to Earn in CH777 Game</h2>
             <p>
               Real games can result in gains or losses. There is no fixed method
               that guarantees profit, and the platform should not be considered a
@@ -693,7 +735,7 @@ export default function HomePage() {
 
         <section className="section section-green">
           <div className="container home-section-inner prose">
-            <h2>Deposit and Payment Overview</h2>
+            <h2 id="deposit-overview">Deposit and Payment Overview</h2>
             <p>
               The wallet section may offer one or more payment channels. Possible
               examples for Pakistani users include mobile wallets or bank
@@ -731,7 +773,7 @@ export default function HomePage() {
 
         <section className="section section-yellow">
           <div className="container home-section-inner prose">
-            <h2>Cash-Out Overview</h2>
+            <h2 id="withdrawal-overview">Cash-Out Overview</h2>
             <p>
               A cash-out request may require the user to select a payment method,
               enter an amount, confirm account details, and wait for processing.
@@ -761,7 +803,7 @@ export default function HomePage() {
 
         <section className="section">
           <div className="container home-section-inner prose">
-            <h2>Is CH777 Game Online Safe?</h2>
+            <h2 id="is-ch777-safe">Is CH777 Game Online Safe?</h2>
             <p>
               No independent guide can guarantee that an online gaming platform
               is completely safe. Safety depends on the file source, website
@@ -803,7 +845,7 @@ export default function HomePage() {
         <section className="section section-ivory">
           <div className="container">
             <div className="section-head">
-              <h2>Bonuses and Rewards</h2>
+              <h2 id="bonuses-and-rewards">Bonuses and Rewards</h2>
               <p>The platform may display several types of promotional offers.</p>
             </div>
             <div className="card-grid-3">
@@ -855,7 +897,9 @@ export default function HomePage() {
         <section className="section section-cream">
           <div className="container">
             <div className="section-head">
-              <h2>Player Reviews and Common Feedback</h2>
+              <h2 id="common-user-feedback">
+                Player Reviews and Common Feedback
+              </h2>
               <p>
                 User experiences can differ according to the phone, internet
                 connection, application version, account status, and payment
@@ -923,7 +967,7 @@ export default function HomePage() {
         <section className="section section-green">
           <div className="container">
             <div className="section-head">
-              <h2>Benefits and Limitations</h2>
+              <h2 id="benefits-and-limitations">Benefits and Limitations</h2>
             </div>
             <div className="card-grid-3">
               <HighlightCard title="Possible Benefits" icon="+">
@@ -966,7 +1010,7 @@ export default function HomePage() {
         <section className="section section-yellow">
           <div className="container">
             <div className="section-head">
-              <h2>Tips for New Users</h2>
+              <h2 id="tips-for-new-users">Tips for New Users</h2>
               <p>Use these points before creating or funding an account:</p>
             </div>
             <div className="card-grid-3">
@@ -1040,11 +1084,12 @@ export default function HomePage() {
           title="Frequently Asked Questions"
           intro="Answers taken from the approved homepage guide."
           items={faqs}
+          headingId="frequently-asked-questions"
         />
 
         <section className="section section-ivory">
           <div className="container home-section-inner prose">
-            <h2>Final Thoughts</h2>
+            <h2 id="final-thoughts">Final Thoughts</h2>
             <p>
               CH777 App brings several mobile gaming categories, wallet features
               and promotional sections into one platform. Its growing visibility
