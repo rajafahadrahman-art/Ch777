@@ -17,11 +17,6 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
-  icons: {
-    icon: [{ url: "/images/ch777-logo.webp", type: "image/webp" }],
-    apple: [{ url: "/images/ch777-logo.webp" }],
-    shortcut: ["/images/ch777-logo.webp"],
-  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
