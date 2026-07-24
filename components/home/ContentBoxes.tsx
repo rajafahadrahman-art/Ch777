@@ -83,7 +83,7 @@ export function CTABox({
 }) {
   return (
     <div className="cta-box pop-card">
-      <h2>{title}</h2>
+      <p className="cta-box-title">{title}</p>
       <p>{text}</p>
       <div className="home-cta-grid">{children}</div>
     </div>
